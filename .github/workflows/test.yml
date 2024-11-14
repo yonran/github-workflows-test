@@ -34,6 +34,12 @@ jobs:
 
         # Dump contexts
       # Copied from https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#example-printing-context-information-to-the-log
+      - name: Dump github env
+        # dump the env that will be used by Context used by GitHub Actions @actions/github
+        # https://github.com/actions/toolkit/blob/2b97eb3192ed27ad81a555e87f3f9de61c11a213/packages/github/src/context.ts  
+        run: echo "$WORKFLOW_ENV"
+        env:
+          WORKFLOW_ENV: ${{ toJson(env) }}
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
