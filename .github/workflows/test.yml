@@ -22,12 +22,17 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Use actions/checkout@v4
+        uses: actions/checkout@v4
+        with:
+            # don’t save GITHUB_TOKEN to .git/config; use credential helper instead
+            # because we don’t want git commands on other repositories to use GITHUB_TOKEN
+            # (e.g. yarn install runs git ls-remote ssh://git@github.com/themaven-net/tempest-common.git)
+            persist-credentials: false
       - name: Set up environment
         uses: ./.github/actions/setup
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
 
-      # Dump contexts
+        # Dump contexts
       # Copied from https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#example-printing-context-information-to-the-log
       - name: Dump GitHub context
         env:
