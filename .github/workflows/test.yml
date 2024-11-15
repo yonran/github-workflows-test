@@ -77,3 +77,5 @@ jobs:
           # https://docs.github.com/en/rest/issues/events?apiVersion=2022-11-28#list-issue-events
           gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" \
              /repos/${{github.repository}}/issues/${{ github.event.pull_request.number || '1' }}/events
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
