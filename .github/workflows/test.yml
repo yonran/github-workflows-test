@@ -8,6 +8,8 @@ on:
   push:
     # branches: [ "main" ]
   pull_request:
+    # The default is [opened, synchronize, or reopened]
+    types: [opened, reopened,synchronize, closed, edited]
     branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
