@@ -81,3 +81,8 @@ jobs:
              /repos/${{github.repository}}/issues/${{ github.event.pull_request.number || '1' }}/events
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: fetch issue events using action
+        uses: ./.github/actions/jsaction
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
