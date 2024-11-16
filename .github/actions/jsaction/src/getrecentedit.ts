@@ -14,5 +14,5 @@ export async function getMostRecentChange(octokit: ReturnType<typeof getOctokit>
         ...options,
         before: null,
     })
-    console.log(a.repository?.pullRequest?.userContentEdits?.nodes, b.repository?.pullRequest?.timelineItems.nodes)
+    console.log('getMostRecentChange', a.repository?.pullRequest?.userContentEdits?.nodes, b.repository?.pullRequest?.timelineItems.nodes)
 }
