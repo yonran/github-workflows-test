@@ -56799,7 +56799,7 @@ async function getMostRecentChange(octokit, options) {
         ...options,
         before: null,
     });
-    console.log(a, b);
+    console.log('getMostRecentChange', a.repository?.pullRequest?.userContentEdits?.nodes, b.repository?.pullRequest?.timelineItems.nodes);
 }
 
 
