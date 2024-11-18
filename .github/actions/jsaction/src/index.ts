@@ -13,7 +13,9 @@ async function mainInsideTry() {
         owner: github.context.repo.owner,
         repo: github.context.repo.repo,
         issue_number: 1,
-        name: 'testlabel1',
+        labels: [{
+            name: 'testlabel1',
+        }],
     });
 }
 
