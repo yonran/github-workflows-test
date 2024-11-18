@@ -56844,6 +56844,12 @@ async function mainInsideTry() {
         pullRequestNumber: 1,
     });
     core.info(JSON.stringify(prHistory));
+    await octokit.rest.issues.addLabels({
+        owner: github.context.repo.owner,
+        repo: github.context.repo.repo,
+        issue_number: 1,
+        name: 'testlabel1',
+    });
 }
 function main() {
     mainInsideTry().catch((error) => {
