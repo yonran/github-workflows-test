@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: read
+      pull-requests: write
       # issues: read
 
     # Steps represent a sequence of tasks that will be executed as part of the job
