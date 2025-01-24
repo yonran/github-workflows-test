@@ -56836,6 +56836,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(7484));
 const github = __importStar(__nccwpck_require__(3228));
 const getrecentedit_js_1 = __nccwpck_require__(5336);
+const fs_1 = __nccwpck_require__(9896);
 async function mainInsideTry() {
     const octokit = github.getOctokit(core.getInput('github-token'));
     const prHistory = await (0, getrecentedit_js_1.getMostRecentChange)(octokit, {
@@ -56850,6 +56851,17 @@ async function mainInsideTry() {
         issue_number: 1,
         labels: ['testlabel1'],
     });
+    const jsonInput = JSON.parse(core.getInput('json-input'));
+    core.setOutput('output-one', 'output-one-value');
+    core.setOutput('json-output', JSON.stringify(jsonInput));
+    console.log('output output-one and json-output');
+    if (process.env['GITHUB_OUTPUT'] !== undefined) {
+        console.log(`value of GITHUB_OUTPUT=${process.env['GITHUB_OUTPUT']}`);
+        console.log((0, fs_1.readFileSync)(process.env['GITHUB_OUTPUT'], 'utf-8'));
+    }
+    else {
+        console.log('GITHUB_OUTPUT is not set; output must have been sent to console.log');
+    }
 }
 function main() {
     mainInsideTry().catch((error) => {

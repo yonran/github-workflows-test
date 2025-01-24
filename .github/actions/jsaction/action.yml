@@ -5,8 +5,16 @@ inputs:
         description: 'GitHub token to fetch and update PRs. This token must have pull-requests: write permission'
         required: true
         default: ${{ github.token }}
+    json-input:
+        description: 'JSON input to the action'
+        required: false
+        default: '{}'
 
-outputs: {}
+outputs:
+    output-one:
+        description: 'Output one from the action'
+    json-output:
+        description: 'JSON output from the action'
 runs:
     using: 'node20'
     main: 'dist/index.js'

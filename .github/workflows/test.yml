@@ -7,13 +7,6 @@ on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     # branches: [ "main" ]
-  pull_request:
-    # The default is [opened, synchronize, or reopened]
-    types: [opened, reopened,synchronize, closed, edited]
-    branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -86,7 +79,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: fetch issue events using action
+        id: jsaction
         uses: ./.github/actions/jsaction
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          json-input: '{"copy_database": true}'
+      - name: read copy_database
+        run: |
+          echo "copy_database: $COPY_DATABASE"
+        env:
+            COPY_DATABASE: ${{ fromJSON(steps.jsaction.outputs.json-output).copy_database }}
 
