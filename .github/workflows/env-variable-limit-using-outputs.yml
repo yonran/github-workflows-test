@@ -69,10 +69,14 @@ jobs:
               id: a16
               env:
                 MYKEY: ${{ steps.a15.outputs.o }}
+                SECOND: ${{ steps.a15.outputs.o }}
+                THIRD: ${{ steps.a15.outputs.o }}
             - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a17
               env:
                 MYKEY: ${{ steps.a16.outputs.o }}
+                SECOND: ${{ steps.a16.outputs.o }}
+                THIRD: ${{ steps.a16.outputs.o }}
             - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a18
               env:
