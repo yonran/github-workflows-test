@@ -5,131 +5,131 @@ jobs:
     find-breaking-point:
         runs-on: ubuntu-latest
         steps:
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a1
               env:
                 MYKEY: a
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a2
               env:
-                MYKEY: ${{ steps.a1.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a1.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a3
               env:
-                MYKEY: ${{ steps.a2.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a2.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a4
               env:
-                MYKEY: ${{ steps.a3.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a3.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a5
               env:
-                MYKEY: ${{ steps.a4.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a4.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a6
               env:
-                MYKEY: ${{ steps.a5.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a5.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a7
               env:
-                MYKEY: ${{ steps.a6.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a6.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a8
               env:
-                MYKEY: ${{ steps.a7.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a7.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a9
               env:
-                MYKEY: ${{ steps.a8.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a8.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a10
               env:
-                MYKEY: ${{ steps.a9.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a9.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a11
               env:
-                MYKEY: ${{ steps.a10.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a10.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a12
               env:
-                MYKEY: ${{ steps.a11.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a11.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a13
               env:
-                MYKEY: ${{ steps.a12.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT" 
+                MYKEY: ${{ steps.a12.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT" 
               id: a14
               env:
-                MYKEY: ${{ steps.a13.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a13.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a15
               env:
-                MYKEY: ${{ steps.a14.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a14.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a16
               env:
-                MYKEY: ${{ steps.a15.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a15.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a17
               env:
-                MYKEY: ${{ steps.a16.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a16.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a18
               env:
-                MYKEY: ${{ steps.a17.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a17.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a19
               env:
-                MYKEY: ${{ steps.a18.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a18.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a20
               env:
-                MYKEY: ${{ steps.a19.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a19.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a21
               env:
-                MYKEY: ${{ steps.a20.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a20.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a22
               env:
-                MYKEY: ${{ steps.a21.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a21.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a23
               env:
-                MYKEY: ${{ steps.a22.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a22.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a24
               env:
-                MYKEY: ${{ steps.a23.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a23.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a25
               env:
-                MYKEY: ${{ steps.a24.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a24.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a26
               env:
-                MYKEY: ${{ steps.a25.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a25.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a27
               env:
-                MYKEY: ${{ steps.a26.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a26.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a28
               env:
-                MYKEY: ${{ steps.a27.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a27.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a29
               env:
-                MYKEY: ${{ steps.a28.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a28.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a30
               env:
-                MYKEY: ${{ steps.a29.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a29.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a31
               env:
-                MYKEY: ${{ steps.a30.outputs.MYKEY }}
-            - run: echo MYKEY=${#MYKEY} && echo "$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
+                MYKEY: ${{ steps.a30.outputs.o }}
+            - run: echo MYKEY=${#MYKEY} && echo "o=$MYKEY$MYKEY" > "$GITHUB_OUTPUT"
               id: a32
               env:
-                MYKEY: ${{ steps.a31.outputs.MYKEY }}
+                MYKEY: ${{ steps.a31.outputs.o }}
