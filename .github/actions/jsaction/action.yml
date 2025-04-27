@@ -1,0 +1,12 @@
+name: 'jsaction'
+description: 'test out github actions api'
+inputs:
+    github-token:
+        description: 'GitHub token to fetch and update PRs. This token must have pull-requests: write permission'
+        required: true
+        default: ${{ github.token }}
+
+outputs: {}
+runs:
+    using: 'node20'
+    main: 'dist/index.js'

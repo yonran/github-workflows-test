@@ -1,0 +1,16 @@
+{
+    "extends": ["@tsconfig/strictest", "@tsconfig/node20"],
+    "compilerOptions": {
+        "rootDir": "./src",
+        "typeRoots": ["./types", "./node_modules/@types"],
+        "outDir": "./dist",
+        "declaration": true,
+        // not sure why we need to add module: "node16" here
+        // which should already be set in @tsconfig/node20
+        // but otherwise ncc fails with
+        // TS5110: Option 'module' must be set to 'Node16' when option 'moduleResolution' is set to 'Node16'.
+        "module": "Node16"
+    },
+    "include": ["src"],
+    "exclude": ["*.mjs"]
+}
